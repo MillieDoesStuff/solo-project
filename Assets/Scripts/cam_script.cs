@@ -2,16 +2,10 @@ using UnityEngine;
 
 public class cam_script : MonoBehaviour
 {
-    public Transform player;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform player_transform;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = new Vector3(player.position.x+5,player.position.y+4,player.position.z);
+        transform.position = new Vector3(player_transform.position.x+3,player_transform.position.y+8,player_transform.position.z); // Keeps the camera fixed to the player
     }
 }
