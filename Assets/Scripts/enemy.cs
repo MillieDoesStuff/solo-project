@@ -69,6 +69,7 @@ public class enemy : MonoBehaviour
                 health -= 1; // Always take 1 hit of damage
                 if (health <= 0)
                 {
+                    player_script.score += 1;
                     Destroy(gameObject);
                     return;
                 }

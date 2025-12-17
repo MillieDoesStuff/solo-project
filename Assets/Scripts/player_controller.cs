@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class player_controller : MonoBehaviour
 {
@@ -13,6 +15,8 @@ public class player_controller : MonoBehaviour
     public bool enemy_hit = false;
     public AudioSource on_hit_audio_source;
     public AudioClip on_hit_audio_clip;
+    public TextMeshProUGUI UI;
+    public int score = 0;
 
     //
 
@@ -146,5 +150,11 @@ public class player_controller : MonoBehaviour
         }
 
         ////////////////////////////////////////
+        /// 
+        /// UI
+     
+        UI.text = "Health: "+health+"\nScore: "+score;
+
+        //////////////////////////
     }
 }

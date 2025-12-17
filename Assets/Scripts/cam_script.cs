@@ -2,7 +2,12 @@ using UnityEngine;
 
 public class cam_script : MonoBehaviour
 {
-    public Transform player_transform;
+    private Transform player_transform;
+
+    void Start()
+    {
+        player_transform = GameObject.Find("Player").transform;
+    }
 
     void FixedUpdate()
     {
